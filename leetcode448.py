@@ -22,7 +22,7 @@ out=[]
 for x in range(len(nums)):
     if x+1 not in nums:
         out.extend([x+1])
-    return out
+
 
 t2=time.time()
 t4=t2-t1
