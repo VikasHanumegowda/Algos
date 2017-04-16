@@ -19,3 +19,5 @@ class Solution(object):
             else:
                 return False
         return True
+Sol=Solution()
+print(Sol.canConstruct("aa","a"))
