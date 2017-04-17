@@ -1,0 +1,24 @@
+n,q=[int(x) for x in input().strip().split(' ')]
+
+seqList=[]
+a=[]
+lastAns=0
+for xx in range(n):
+    for yy in range(n):
+        a.extend([])
+    seqList.extend([a])
+    a=[]
+
+for i in range(q):
+    _1or2,x,y=[int(x) for x in input().strip().split(' ')]
+    #print(_1or2,x,y)
+    if _1or2==1:
+        seqList[(x^lastAns)%n].extend([y])
+        #print(seqList)
+    elif _1or2==2:
+        seq=seqList[(x^lastAns)%n]
+        elem=seq[y]
+        #print(elem)
+        elem%=len(seq)
+        lastAns=seq[elem]
+        print(lastAns)
