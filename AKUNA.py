@@ -30,6 +30,35 @@ class MarkingPositionMonitor:
             "quantity": 1100,
             "time": "2016-12-22T12:07:04.521073"
         }
+        
+        from the question
+        {
+            "type": "NEW",
+            "symbol": "MSFT",
+            "order_id": 5,
+            "side": "SELL",
+            "quantity": 1100,
+            "time": "2016-12-22T12:07:04.521073"
+        }
+        
+        AAPL, IBM, MSFT
+        
+        
+        NEW, 				out
+        ORDER_ACK,
+        ORDER_REJECT
+        CANCEL, 			out
+        CANCEL_ACK,
+        CANCEL_REJECT,
+        FILL
+        
+        
+        buying - getting
+        selling - giving 
+        position - shares of instumenet I own
+        flat - long - short
+        
+        return marking position		
     '''
 
     def on_event(self, message):
